@@ -10,10 +10,10 @@ class CreateUser extends UsecaseWithParams<void, CreateUserParams> {
 
   @override
   ResultVoid call(CreateUserParams params) async => _repository.createUser(
-        createdAt: params.createdAt,
-        name: params.name,
-        avatar: params.avatar,
-      );
+      createdAt: params.createdAt,
+      name: params.name,
+      avatar: params.avatar,
+    );
 }
 
 class CreateUserParams extends Equatable {
@@ -24,11 +24,11 @@ class CreateUserParams extends Equatable {
   });
 
   const CreateUserParams.empty()
-      : this(
-          createdAt: "createdAt.empty",
-          avatar: "avatar.empty",
-          name: "name.empty",
-        );
+  : this(
+    createdAt: '_empty.createdAt',
+    name: '_empty.name',
+    avatar: '_empty.avatar',
+  );
 
   final String createdAt;
   final String name;
